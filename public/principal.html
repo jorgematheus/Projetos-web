@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Typing game</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+	<link rel="stylesheet" type="text/css" href="css/libs/materialize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/libs/google-fonts.css"/>
+</head>
+<body>
+    <div class="container">
+		   
+            <h1 class="center">Typing game </h1>
+            <p class="phrase center">teste de frase</p>
+			<div class="center">
+	        <p class="erro"> Ocorreu um erro! Por favor, tente novamente!</p>
+			<img id="spinner" src="img/spinner.gif" alt="Spinner"/>
+			</div>
+              <ul class="informacoes center">
+                <li>
+                    <i class="small material-icons icones">description</i>
+                    <span id="number-words"></span> palavras.</li>
+                <li>
+                    <i class="small material-icons icones">description</i>
+                    <span id="number-characters"></span> caracteres.</li>
+                <li>
+                    <i class="small material-icons icones">query_builder</i>
+                    <span id="time-left">5</span> segundos</li>
+              </ul>
+
+            <textarea class="typing-field" rows="8" cols="100" aria-required="true"></textarea>
+			
+			<div id="buttons">
+				<button disabled="true" id="button-restart">Reiniciar</button>
+				<button  id="button-change-phrase">Trocar Frase</button>
+                <button id="button-search-phrase"> Buscar Frase</button>                
+				<button id="button-show-phrase"> Mostra Frases</button>				
+				<input id="search-phrase-id" type="number" min="0" />
+				<button id="button-sync"> Salvar</button>	
+				
+			</div>
+              <div>
+                <ul class="center">
+                    <li><span id="counter-character">0</span> caracteres.</li>
+                    <li><span id="counter-words">0</span> palavras.</li>
+
+                </ul>
+                <section class="section-table-words" id="section-table-words">
+                            <h3 class="center">Frases</h3>
+                            <table class="centered bordered" id="table-words">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>FRASE</th>                                         
+                                        <th>TEMPO (s)</th>                                         
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </section>  
+        
+                        <section class="placar" id="scoreboard">
+                            <h3 class="center">Placar</h3>
+                            <table class="centered bordered" id="tbl-users">
+                                <thead>
+                                    <tr>
+                                        <th>Usuário</th>
+                                        <th>No. de palavras</th>
+										<th>Digitou a frase corretamente </th>
+                                        <th> Remover</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="placar-users">
+                                    
+                                </tbody>
+                            </table>
+                        </section>					
+										
+		</div>
+		
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/placar.js"></script>
+    <script src="js/frases.js"></script>
+	<script src="js/tableFrases.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+</body>
+</html>
